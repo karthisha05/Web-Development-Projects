@@ -1,0 +1,21 @@
+
+[
+    {
+        "id": "N-101",
+        "title": "Semester Examination",
+        "category": "Examination",
+        "date": "15 October 2026"
+    },
+    {
+        "id": "N-102",
+        "title": "College Holiday",
+        "category": "Holiday",
+        "date": "20 October 2026"
+    },
+    {
+        "id": "N-103",
+        "title": "Tech Fest 2026",
+        "category": "Event",
+        "date": "25 October 2026"
+    }
+]
