@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Notice Board</title>
+    <link rel="icon" href="./icons8-noticeboard-96.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <header>
+
+        <h1>STUDENT NOTICE BOARD</h1>
+
+        <p>College Communication Portal</p>
+
+    </header>
+
+    <main>
+
+         <section>
+
+            <h2>LATEST NOTICES</h2>
+
+            <div id="noticeContainer">
+
+                <!-- Notices will be displayed here -->
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>NOTICE DETAILS</h2>
+
+            <div id="noticeDetails">
+
+                <p>
+                    <strong>Notice Title :</strong>
+                    <span id="noticeTitle">Select a notice</span>
+                </p>
+
+                <p>
+                    <strong>Date :</strong>
+                    <span id="noticeDate">---</span>
+                </p>
+
+                <p>
+                    <strong>Category :</strong>
+                    <span id="noticeCategory">---</span>
+                </p>
+
+            </div>
+
+            <button id="loadNotice">
+                📄 LOAD FULL NOTICE
+            </button>
+
+        </section>
+
+
+
+        <section>
+
+            <h2>NOTICE CONTENT</h2>
+
+            <pre id="noticeContent">Full notice content will appear here...</pre>
+
+        </section>
+
+
+     
+
+        <section>
+
+            <h2>REQUEST STATUS</h2>
+
+            <div id="requestStatus">
+
+                <p>
+                    Ready State :
+                    <strong id="readyState">0</strong>
+                </p>
+
+                <p>
+                    Method :
+                    <strong id="method">GET</strong>
+                </p>
+
+                <p>
+                    Source :
+                    <strong id="source">Waiting...</strong>
+                </p>
+
+                <p>
+                    Status :
+                    <strong id="status">Waiting...</strong>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>Student Notice Board</p>
+
+        <p>College Communication System</p>
+
+    </footer>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f2222;
+    color: #222;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
+
+header {
+    background-color: #142f45;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}c
+
+header p {
+    font-size: 15px;
+    color: #dce8f0;
+}
+
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+
+section {
+    background-color: rgb(210, 205, 205);
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #173f5f;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid blue;
+    padding-bottom: 10px;
+}
+
+#noticeContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.notice-card {
+    background-color: #a1a5a9;
+    border: 1px solid #d8dee4;
+    width: 31%;
+    min-width: 240px;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.notice-card h3 {
+    color: #173f5f;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.notice-card h4 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.notice-card p {
+    color: #262424;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+
+
+button {
+    background-color: #39556c;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    margin-top: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+button:hover {
+    border: 2px solid rgb(8, 32, 45);
+}
+
+
+
+#noticeDetails {
+    background-color: #a1a5a9;
+    border: 1px solid #e0e4e8;
+    padding: 18px;
+}
+
+#noticeDetails p {
+    padding: 10px 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+#noticeDetails p:last-child {
+    border-bottom:none;
+}
+
+#noticeDetails strong {
+    display: inline-block;
+    width: 140px;
+  color: #173f5f;
+}
+
+
+
+#noticeContent {
+    background-color: #c1c1c2;
+   border-radius: 5px;
+    padding: 20px;
+    min-height: 180px;
+
+    white-space: pre-wrap;
+    box-shadow: 0px 0px 5px black;
+
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+
+#requestStatus {
+    background-color: #dedfe1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+     box-shadow: 0px 0px 5px black;
+
+    padding: 18px;
+}
+
+#requestStatus p {
+    padding: 10px 0;
+    border-bottom: 1px solid #989898;
+}
+
+#requestStatus p:last-child {
+    border-bottom: none;
+}
+
+#requestStatus strong {
+    color: #173f5f;
+    margin-left: 10px;
+}
+
+
+
+footer {
+    text-align: center;
+       background-color: #142f45;
+    color: white;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+footer p:first-child {
+    margin-bottom: 7px;
+}
+
+
+
+function loadNotices() {
+
+    let http = new XMLHttpRequest();
+
+    http.open("GET", "./notices.json", true);
+
+    document.getElementById("method").textContent = "GET";
+    document.getElementById("source").textContent = "notices.json";
+    document.getElementById("status").textContent = "Loading Notices...";
+
+
+    http.onreadystatechange = function () {
+
+        document.getElementById("readyState").textContent = http.readyState;
+
+
+        if (http.readyState == 4) {
+
+            let notices = JSON.parse(http.responseText);
+
+            displayNotices(notices);
+
+            document.getElementById("status").textContent =
+                "Notices Loaded Successfully";
+        }
+
+    };
+
+
+    http.send();
+
+}
+
+
+
+function displayNotices(notices) {
+
+    let container = document.getElementById("noticeContainer");
+
+    container.innerHTML = "";
+
+
+    for (let i = 0; i < notices.length; i++) {
+
+        let card = document.createElement("div");
+
+        card.className = "notice-card";
+
+
+        card.innerHTML = `
+            <h3>NOTICE #${notices[i].id}</h3>
+
+            <h4>${notices[i].title}</h4>
+
+            <p>Category : ${notices[i].category}</p>
+
+            <p>Date : ${notices[i].date}</p>
+
+            <button onclick="viewNotice(${i})">
+                VIEW NOTICE
+            </button>
+        `;
+
+
+        container.appendChild(card);
+
+    }
+
+}
+
+
+let selectedNotice = null;
+
+
+function viewNotice(index) {
+
+    let http = new XMLHttpRequest();
+
+    http.open("GET", "./notices.json", true);
+
+
+    http.onreadystatechange = function () {
+
+        document.getElementById("readyState").textContent =
+            http.readyState;
+
+
+        if (http.readyState == 4) {
+
+            let notices = JSON.parse(http.responseText);
+
+            selectedNotice = notices[index];
+
+
+            document.getElementById("noticeTitle").textContent =
+                selectedNotice.title;
+
+            document.getElementById("noticeDate").textContent =
+                selectedNotice.date;
+
+            document.getElementById("noticeCategory").textContent =
+                selectedNotice.category;
+
+
+            document.getElementById("method").textContent = "GET";
+
+            document.getElementById("source").textContent =
+                "notices.json";
+
+            document.getElementById("status").textContent =
+                "Notice Selected";
+
+        }
+
+    };
+
+
+    http.send();
+
+}
+
+
+function loadFullNotice() {
+
+    let http = new XMLHttpRequest();
+
+    http.open("GET", "./notice.txt", true);
+
+
+    document.getElementById("method").textContent = "GET";
+
+    document.getElementById("source").textContent =
+        "notice.txt";
+
+    document.getElementById("status").textContent =
+        "Loading Notice...";
+
+
+    http.onreadystatechange = function () {
+
+        document.getElementById("readyState").textContent =
+            http.readyState;
+
+
+        if (http.readyState == 4) {
+
+            document.getElementById("noticeContent").textContent =
+                http.responseText;
+
+            document.getElementById("status").textContent =
+                "Notice Loaded Successfully";
+
+        }
+
+    };
+
+
+    http.send();
+
+}
+
+
+document.getElementById("loadNotice").onclick = function () {
+
+    loadFullNotice();
+
+};
+
+
+loadNotices();
+
+notices.txt:
+COLLEGE NOTICE
+==============
+
+SEMESTER EXAMINATION
+
+Date : 15 October 2026
+
+All students are informed that the
+semester examinations will begin from
+15 October 2026.
+
+Students are requested to check their
+examination timetable and report to the
+examination hall on time.
+
+For further information, contact the
+college administration.
+
+END OF NOTICE
+
+
+
+notices.json:
+
+[
+    {
+        "id": "N-101",
+        "title": "Semester Examination",
+        "category": "Examination",
+        "date": "15 October 2026"
+    },
+    {
+        "id": "N-102",
+        "title": "College Holiday",
+        "category": "Holiday",
+        "date": "20 October 2026"
+    },
+    {
+        "id": "N-103",
+        "title": "Tech Fest 2026",
+        "category": "Event",
+        "date": "25 October 2026"
+    }
+]
+
