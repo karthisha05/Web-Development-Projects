@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Help Documentation</h2>
+    <button onclick="LoadHelp()">LLoad Help</button>
+    <pre id="content"></pre>
+    <script>
+        function  LoadHelp()
+        {
+            let http=new XMLHttpRequest();
+            http.open("GET","help.txt",true);
+            http.onreadystatechange=function()
+            {
+            if(http.readyState===4)
+            {
+                if(http.status===200)
+            {
+                document.getElementById("content").textContent=http.responseText;
+            }
+            else
+            {
+                document.getElementById("content").textContent="Error loading Help";
+            }
+            }
+            };
+            http.send();
+        }
+    </script>
+</body>
+</html>

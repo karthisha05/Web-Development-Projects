@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Ready State</title>
+</head>
+<body>
+    <h2 id="state">Current state : 0</h2>
+    <button onclick="checkStatus()">Check Status</button>
+    <pre id="output"></pre>
+    <script>
+        function checkStatus()
+         {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "status.txt", true);
+            xhr.onreadystatechange = function () 
+            {
+                document.getElementById("state").textContent = "Current State : " + xhr.readyState;
+                if (xhr.readyState === 4) 
+                {
+                    if (xhr.status === 200) 
+                    {
+                        document.getElementById("output").textContent =xhr.responseText;
+                    }
+                     else
+                      {
+                        document.getElementById("output").textContent = "Unable to load file.";
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load Employees</title>
+</head>
+<body>
+    <h2>Employee Details</h2>
+    <button onclick="loadEmployees()">Load Employees</button>
+    <pre id="output"></pre>
+    <script>
+        function loadEmployees() 
+        {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "employees.json", true);
+            xhr.onreadystatechange = function () 
+            {
+                if (xhr.readyState === 4) 
+                {
+                    if (xhr.status === 200) 
+                    {
+                        document.getElementById("output").textContent = xhr.responseText;
+
+                    }
+                     else 
+                    {
+
+                        document.getElementById("output").textContent = "Error loading employees";
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

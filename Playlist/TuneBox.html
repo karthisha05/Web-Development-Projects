@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TuneBox - Music Playlist</title>
+
+    <link rel="stylesheet" href="./flex.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎵 TuneBox</h1>
+        <p>Your Simple Music Playlist</p>
+    </header>
+
+
+    <main>
+        <section class="playlist-section">
+
+            <div class="section-heading">
+                <h2>My Playlist</h2>
+                <span id="songCount">0 Songs</span>
+            </div>
+
+            <div id="songContainer" class="song-container">
+                
+            </div>
+
+        </section>
+
+        <section class="controls-section">
+
+            <h2>Playlist Controls</h2>
+
+            <div class="controls">
+
+                <button onclick="addSong()">
+                     Add Song
+                </button>
+
+                <button onclick="removeSong()">
+                     Remove Song
+                </button>
+
+                <button onclick="sortSongs()">
+                    Sorting [A-Z]
+                </button>
+
+                <button onclick="reverseSongs()">
+                     Reverse
+                </button>
+
+            </div>
+     </section>
+
+        <section class="recent-section">
+            <h2>Recently Added</h2>
+            <div id="recentSongs" class="recent-songs">
+            </div>
+        </section>
+        <section class="summary-section">
+            <h2>Playlist Summary</h2>
+            <p id="playlistSummary">
+                Your playlist is empty.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>🎧 TuneBox &copy; 2026</p>
+    </footer>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
+
+
+
