@@ -3,123 +3,611 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Notice Board</title>
-    <link rel="icon" href="./icons8-noticeboard-96.png">
-    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: gray;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    padding: 20px;
+}
+
+.navbar {
+
+    
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 60px;
+   
+}
+
+.logo h2 {
+    color: black;
+}
+
+nav a {
+    
+    color: black;
+    transition: 0.3s;
+}
+
+.nav links a:hover {
+    color: white;
+}
+
+.content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info h1 {
+    color:blue;
+}
+
+.info p {
+    color: gray;
+}
+
+.info button {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+    border-radius: 25px;
+    padding: 10px 22px;
+    transition: 0.3s;
+}
+
+.info button:hover {
+    background-color: navy;
+    border-color: blue;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px navy;
+}
+
+.info button {
+    background-color: white;
+    color: blue;
+}
+.info button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.btn{
+     width: 90%;
+    background-color: blue;
+    color: black;
+    border: 2px solid blue;
+    border-radius: 25px;
+    padding: 10px 22px;
+    transition: 0.3s;
+}
+.Image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px black;
+    transition: 0.5s;
+}
+
+.Image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px black;
+}
+
+.service {
+  
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.help {
+  
+    text-align: center;
+    
+    margin-bottom: 10px;
+}
+
+ .help h2 {
+    color: blue;
+}
+
+.need {
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 20px;
+    min-height: 180px;
+    box-shadow: 0 4px 15px black;
+    transition: 0.3s;
+}
+
+.need:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px black;
+}
+
+.need h3 {
+    margin-bottom: 12px;
+}
+
+.need p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.need button {
+    background-color: lightblue;
+    color: white;
+    border-radius: 20px;
+    padding: 9px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.need button:hover {
+    background-color: lightblue;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px navy;
+}
+
+.hero {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.heading h1 {
+    color: blue;
+}
+
+.basic {
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 15px black;
+    transition: 0.3s;
+}
+
+.basic:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px black;
+}
+
+.basic img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.basic:hover img {
+    transform: scale(1.05);
+}
+
+.basic p {
+    color: gray;
+    margin-top: 10px;
+}
+
+.basic button {
+    margin-top: 15px;
+    background-color: blue;
+   color:white;
+    border-radius: 20px;
+    padding: 9px 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.basic button:hover {
+    background-color:blue;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px darkblue;
+}
+
+.emergency {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+    background-color: white;
+    border: 1px solid lightcoral;
+    border-radius: 10px;
+    padding: 18px 25px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emergency h3 {
+    color:red;
+}
+
+.emergency p {
+    color: black;
+}
+
+.emergency button {
+    background-color:red;
+    color: white;
+    border-radius: 20px;
+    padding: 9px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.emergency button:hover {
+    background-color:red;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px purple;
+}
+
+.require {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+ .heading {
+    grid-column: 1 / 5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ .heading h2 {
+    color: lightblue;
+}
+
+.magic {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px 10px;
+    box-shadow: 0 4px 15px black;
+    transition: 0.3s;
+}
+
+.magic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px black;
+}
+
+.magic h3 {
+    color: blue;
+    margin-bottom: 8px;
+}
+
+.magic p {
+    color: black;
+}
+
+.form-container {
+    width: 500px;
+    grid-column: 1 / 5;
+    margin: 25px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px black;
+}
+
+.form-container h1 {
+    color:lightblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    width: 100%;
+}
+
+.box {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.box input{
+     width: 100%;
+    height: 40px;
+    border: 1px solid peachpuff;
+    border-radius: 6px;
+    padding: 8px 10px;
+    transition: 0.3s;
+}
+.box select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid peachpuff;
+    border-radius: 6px;
+    padding: 8px 10px;
+    transition: 0.3s;
+}
+
+.box input:focus{
+     border-color:lightblue;
+    box-shadow: 0 0 5px gray;
+}
+.box select:focus {
+    border-color:lightblue;
+    box-shadow: 0 0 5px gray;
+}
+
+.form-container button {
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background-color: blue;
+    transform: translateY(-2px);
+}
+
+footer {
+    width: 100%;
+    margin-top: 60px;
+    background: blue;
+    color: white;
+    padding: 40px 8px 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+}
+
+footer  h3 {
+    grid-column: 1;
+}
+
+footer  p {
+    grid-column: 1;
+}
+
+ .links {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.links p {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer .links p:hover {
+    padding-left: 5px;
+}
+
+ .contact {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.copyright {
+    grid-column: 3/ 4;
+    border-top: 1px solid gray;
+    padding-top: 12px;
+    text-align: center;
+}
+</style>
 <body>
-     <header>
-
-        <h1>STUDENT NOTICE BOARD</h1>
-
-        <p>College Communication Portal</p>
-
-    </header>
-
-    <main>
-
-         <section>
-
-            <h2>LATEST NOTICES</h2>
-
-            <div id="noticeContainer">
-
-                <!-- Notices will be displayed here -->
-
-            </div>
-
-        </section>
-
-        <section>
-
-            <h2>NOTICE DETAILS</h2>
-
-            <div id="noticeDetails">
-
-                <p>
-                    <strong>Notice Title :</strong>
-                    <span id="noticeTitle">Select a notice</span>
-                </p>
-
-                <p>
-                    <strong>Date :</strong>
-                    <span id="noticeDate">---</span>
-                </p>
-
-                <p>
-                    <strong>Category :</strong>
-                    <span id="noticeCategory">---</span>
-                </p>
-
-            </div>
-
-            <button id="loadNotice">
-                📄 LOAD FULL NOTICE
-            </button>
-
-        </section>
-
-
-
-        <section>
-
-            <h2>NOTICE CONTENT</h2>
-
-            <pre id="noticeContent">Full notice content will appear here...</pre>
-
-        </section>
-
-
+    <header>
+  
+        <div class="logo">
+        <h2>MediCare</h2>
+        </div>
+          <nav class="navbar">
      
+            <a href="#">Home</a>
+            <a href="#">Doctors</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+      
+    </nav>
+</header>
+    <section class="content">
+        <div class="info">
+            <h1>24/7 Healthcare Services</h1>
+            <p>Providing quality treatment with experienced doctors and advanced medical facilities. Your health is our priority.</p>
+            <button>Book Appointment</button>
+            <button class="btn">Explore Services</button>
+        </div>
+        <div class="Image">
+            <img src="./Hospital2.jpg" alt="Hospital">
+        </div>
+    </section>
+    <div class="help">
+            <h2>Our Services</h2>
+        </div>
+    <section class="service">
+        
+        <div class="help">
+        <h3>Emergency</h3>
+        <p>24 Hours Emergency Care Available</p>
+        <button>View More</button>
+        </div>
 
-        <section>
+        <div class="help">
+            <h3>Pharmacy</h3>
+            <p>Medicines Available All Time</p>
+            <button>View More</button>
+        </div>
 
-            <h2>REQUEST STATUS</h2>
+        <div class="help">
+            <h3>Ambulance</h3>
+            <p>Fast Ambulance Services</p>
+            <button>View More</button>
+        </div>
+    </section>
 
-            <div id="requestStatus">
+    <section class="hero">
+        <div class="heading">
+            <h1>Our Doctors</h1>
+        </div>
 
-                <p>
-                    Ready State :
-                    <strong id="readyState">0</strong>
-                </p>
+        <div class="basic">
+            <img src="./doctor_akshaya.jpg" alt="Akshaya">
+            <p>10Years Exp</p>
+            <p>Cardiologist</p>
+            <button>Book Now</button>
+        </div>
 
-                <p>
-                    Method :
-                    <strong id="method">GET</strong>
-                </p>
+        <div class="basic">
+            <img src="./manoj.jpg" alt="Manoj">
+             <p>Dr.Manoj 8 years Exp</p>
+             <p>Dentist</p>
+             <button>Book Now</button>
+        </div>
 
-                <p>
-                    Source :
-                    <strong id="source">Waiting...</strong>
-                </p>
+        <div class="basic">
+            <img src="./Bharath.jpg" alt="Senior">
+            <p>Dr.Bharath Senior</p>
+            <p>Neurologist</p>
+            <button>Book Now</button>
+        </div>
+    </section>
 
-                <p>
-                    Status :
-                    <strong id="status">Waiting...</strong>
-                </p>
+    <section class="emergency">
+    <div class="heading">
+        <h3> ⚠ Emergency Hotline</h3>
+        <p>Available 24×7 for critical care</p>
+        <button>Call Now</button>
+    </div>
+</section>
 
-            </div>
+    <section class="require">
+        <div class="heading">
+            <h2>Hospital Statistics</h2>
+        </div>
 
-        </section>
+        <div class="magic">
+            <h3>120+</h3>
+            <p>Doctors</p>
+        </div>
 
-    </main>
+        <div class="magic">
+            <h3>5000+</h3>
+            <p>Patients</p>
+        </div>
 
+        <div class="magic">
+            <h3>50+</h3>
+            <p>Departments</p>
+        </div>
+
+        <div class="magic">
+            <h3>24/7</h3>
+            <p>Emergency</p>
+        </div>
+    </div>
+        <form>
+            <div class="form-container">
+            <h1>Book Appointment</h1>
+            <form action="">
+                <div class="row">
+                    <div class="box">
+                        <input type="name" placeholder="Patient Name">
+                        </div>
+                </div>
+
+                    <div class="box">
+                        <input type="email" placeholder="Email Address">
+                    </div>
+           
+                    <div class="box">
+                        <select name="Select Department" placeholder="Select Department">
+	                    <option value="Select Department">Select Department</option>
+	                    <option value="Cardiology">Cardiology</option>
+	                    <option value="Dental">Dental</option>
+	                    <option value="Neurology">Neurology</option>
+                       <option value="Orthopedic">Orthopedic</option>
+	                </select>
+          </div>
+
+
+          <div class="box">
+            <input type="date">
+          </div>
+          <button>Book Appointment</button>
+        </form>
+    </section>
 
     <footer>
+        <h3>MediCare Hospital</h3>
+        <p>Providing world-class healthcare services with experienced doctors and advanced facilities. Your health is our priority.</p>
 
-        <p>Student Notice Board</p>
+        <div class="links">
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>Doctors</p>
+            <p>Services</p>
+            <p>Appointment</p>
+            <p>Contact Us</p>
+        </div>
 
-        <p>College Communication System</p>
-
+        <div class="contact">
+            <h3>Contact Info</h3>
+            <p>📍Hyderabad,Telangana</p>
+            <p>📞+91 9876543210</p>
+            <p>medicare@gmail.com</p>
+             <p>facebook</p>
+             
+        </div>
+    </div>
+          <div class="copyright">
+        <p>© 2026 MediCare Hospital|All Rights Reserved.</p>
+        </div>
     </footer>
-
-
-    <script src="./script.js"></script>
-
 </body>
 </html>
-
-
-
-
-

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+<title>MediCare Hospital</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+body{
+    background:#f4f7fc;
+    overflow-x:hidden;
+}
+
+/* Full Width Container */
+
+.container{
+    max-width:1400px;
+}
+
+/* Navbar */
+
+.navbar{
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+/* Hero Section */
+
+.hero{
+    margin-top:80px;
+    margin-bottom:120px;
+}
+
+.hero-content{
+    padding-right:80px;
+}
+
+.hero-content h1{
+    color:#0d6efd;
+    margin-bottom:30px;
+}
+
+.hero-content p{
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-image{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:.5s;
+}
+
+.hero-image:hover{
+    transform:scale(1.02);
+}
+
+/* Section Title */
+
+.section-title{
+    margin-bottom:60px;
+    color:#0d6efd;
+    font-weight:bold;
+}
+
+/* Cards */
+
+.card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+.card-body{
+    padding:35px;
+}
+
+.card-img-top{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    object-position:center top;
+}
+
+.btn{
+    border-radius:30px;
+    padding:12px 30px;
+}
+
+/* Services */
+
+.service-icon{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+/* Sections */
+
+.section{
+    margin-top:120px;
+}
+
+.footer{
+    background:linear-gradient(to right,#0d6efd,#084298);
+    color:white;
+    padding:80px 0 20px;
+}
+
+.footer h3,
+.footer h4{
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+.footer p{
+    color:#e9ecef;
+    line-height:1.8;
+}
+
+.footer ul li{
+    margin-bottom:12px;
+}
+
+.footer ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer ul li a:hover{
+    color:#ffd43b;
+    padding-left:10px;
+}
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons i{
+    font-size:24px;
+    margin-right:18px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.social-icons i:hover{
+    color:#ffd43b;
+    transform:translateY(-6px);
+}
+
+.footer hr{
+    margin:40px 0 20px;
+    border:1px solid rgba(255,255,255,.3);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+<div class="container">
+
+<a class="navbar-brand fs-3 fw-bold">
+
+<i class="bi bi-hospital"></i>
+
+MediCare
+
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Doctors</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Services</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- Hero -->
+
+<div class="container hero">
+
+<div class="row align-items-center g-5">
+
+<div class="col-md-6 hero-content">
+
+<h1 class="display-3 fw-bold">
+
+24/7 Healthcare Services
+
+</h1>
+
+<p class="text-secondary">
+
+Providing quality treatment with experienced doctors and advanced medical facilities. Your health is our priority.
+
+</p>
+
+<button class="btn btn-primary btn-lg">
+
+Book Appointment
+
+</button>
+
+<button class="btn btn-outline-primary btn-lg">
+
+Explore Services
+
+</button>
+
+</div>
+
+<div class="col-md-6">
+
+<img src="./Hospital2.jpg"
+class="hero-image shadow ">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Services -->
+
+<div class="container section">
+
+<h2 class="text-center section-title">
+
+Our Services
+
+</h2>
+
+<div class="row g-5">
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<div class="card-body text-center">
+
+<i class="bi bi-heart-pulse-fill text-danger service-icon"></i>
+
+<h3>Emergency</h3>
+
+<p>
+
+24 Hours Emergency Care Available
+
+</p>
+
+<button class="btn btn-danger">
+
+View More
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<div class="card-body text-center">
+
+<i class="bi bi-capsule text-success service-icon"></i>
+
+<h3>Pharmacy</h3>
+
+<p>
+
+Medicines Available All Time
+
+</p>
+
+<button class="btn btn-success">
+
+View More
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<div class="card-body text-center">
+
+<i class="bi bi-truck text-primary service-icon"></i>
+
+<h3>Ambulance</h3>
+
+<p>
+
+Fast Ambulance Services
+
+</p>
+
+<button class="btn btn-primary">
+
+View More
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Doctors -->
+
+<div class="container section">
+
+<h2 class="text-center section-title">
+
+Our Doctors
+
+</h2>
+
+<div class="row g-5">
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<img src="./doctor_akshaya.jpg"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h4>
+
+Dr. Akshaya
+
+<span class="badge bg-success">
+
+10 Years Exp
+
+</span>
+
+</h4>
+
+<p>Cardiologist</p>
+
+<button class="btn btn-primary">
+
+Book Now
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<img src="./manoj.jpg"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h4>
+
+Dr. Manoj
+
+<span class="badge bg-warning">
+
+8 Years Exp
+
+</span>
+
+</h4>
+
+<p>Dentist</p>
+
+<button class="btn btn-primary">
+
+Book Now
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<img src="./Bharath.jpg"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h4>
+
+Dr. Bharath
+
+<span class="badge bg-danger">
+
+Senior
+
+</span>
+
+</h4>
+
+<p>Neurologist</p>
+
+<button class="btn btn-primary">
+
+Book Now
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="container section">
+
+<div class="alert alert-danger d-flex justify-content-between align-items-center">
+
+<div>
+
+<h4 class="mb-1">
+
+<i class="bi bi-exclamation-triangle-fill"></i>
+
+Emergency Hotline
+
+</h4>
+
+Available 24×7 for critical care
+
+</div>
+
+<button class="btn btn-danger">
+
+Call Now
+
+</button>
+
+</div>
+
+</div>
+<div class="container section">
+
+<h2 class="text-center section-title">
+
+Hospital Statistics
+
+</h2>
+
+<div class="row g-5">
+
+<div class="col-md-3">
+
+<div class="card shadow text-center">
+
+<div class="card-body">
+
+<h1 class="text-primary">120+</h1>
+
+<h5>Doctors</h5>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow text-center">
+
+<div class="card-body">
+
+<h1 class="text-success">5000+</h1>
+
+<h5>Patients</h5>
+
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card shadow text-center">
+<div class="card-body">
+<h1 class="text-danger">50+</h1>
+<h5>Departments</h5>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card shadow text-center">
+<div class="card-body">
+<h1 class="text-warning">24×7</h1>
+<h5>Emergency</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container section">
+<h2 class="text-center section-title">
+Book Appointment
+</h2>
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="card shadow">
+<div class="card-body p-5">
+<form>
+<input type="text" placeholder="Patient Name" class="form-control mb-4">
+
+<input type="email" placeholder="Email Address" class="form-control mb-4">
+<select class="form-select mb-4">
+<option>Select Department</option>
+<option>Cardiology</option>
+<option>Dental</option>
+<option>Neurology</option>
+<option>Orthopedic</option>
+</select>
+<input type="date" class="form-control mb-4">
+<button class="btn btn-primary w-100">Book Appointment
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <h3>
+                    <i class="bi bi-hospital"></i>
+                    MediCare Hospital
+                </h3>
+                <p> Providing world-class healthcare services with experienced doctors and advanced facilities. Your health is our priority.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Appointment</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Contact Info</h4>
+                <p>
+                    <i class="bi bi-geo-alt-fill"></i>Hyderabad, Telangana
+                </p>
+                <p>
+                    <i class="bi bi-telephone-fill"></i>+91 9876543210</p>
+                <p><i class="bi bi-envelope-fill"></i>medicare@gmail.com</p>
+                <div class="social-icons">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-linkedin"></i>
+                    <i class="bi bi-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">
+            <p class="mb-0"> © 2026 MediCare Hospital | All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</body>
+</html>
